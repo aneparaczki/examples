@@ -27,6 +27,10 @@ object Main {
   }
 }
 
+/* 
+   ilyen scala objectból futó alkalmazásonként egy van globálisan, 
+   szóval mindenütt ugyan ez az egy érhető el, ezért jó tárolni hogy hanyadik ID-nél járunk
+ */
 object Item{
   var idCounter: Int = 0
   
@@ -36,6 +40,7 @@ object Item{
   }
 }
 
+// ez maga az item class amiből példányok lesznek
 case class Item(
   name: String,
   durability: Int = 0,
